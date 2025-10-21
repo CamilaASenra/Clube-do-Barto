@@ -1,5 +1,164 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "One Piece";
+    src: url(fontes/one\ piece\ font.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Texto";
+    src: url(fontes/ComicRelief-Regular.ttf) format("truetype");
+}
+
+:root {
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-onepiece: "One Piece", sans-serif;
+    --font-texto: "Texto", sans-serif;
+    --cor0: #E62C39;
+    --cor1: #FBC920;
+    --cor2: #B9EFF8;
+    --cor3: #2F76DC;
+    --cor4: #2E333F;
+    --cor6: #DFC18A;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-padrao);
+    background-color: var(--cor2);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor6), var(--cor1));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+header > h1 {
+    color: var(--cor4);
+    font-family: var(--font-onepiece);
+    font-size: 5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.274);
+}
+
+header > p {
+    color: var(--cor4);
+    font-family: var(--font-texto);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.100);
+}
+
+nav {
+    background-color: var(--cor1);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.26);
+    text-align: center;
+}
+
+nav > a {
+    color: var(--cor4);
+    font-family: var(--font-texto);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+
+nav > a:hover {
+    background-color: #fcc100;
+    color: black;
+}
+
+main {
+    font-family: var(--font-texto);
+    background-color: var(--cor0);
+    min-width: 300px;
+    max-width: 1000px;
+    min-height: 400px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.471);
+    border-radius: 0px 0px 10px 10px;
+}
+
+#imagem {
+    background: var(--cor0) url(imagens/bartpp.png) no-repeat;
+    background-position: bottom right;
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.822);
+    max-width: 650px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.192);
+}
+
+section {
+    background-color: var(--cor3);
+    background-size: 100px 100px;
+    display: inline-block;
+
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px  rgba(0, 0, 0, 0.192);
+}
+
+a.links {
+    border: 1px solid black;
+    width: 10px;
+}
+
+a:hover > section{
+    background-color: var(--cor2);
+    transition-duration: 0.3s;
+}
+
+section > p {
+    font-family: var(--font-onepiece);
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--cor4);
+    text-decoration: none;
+    width: 200px;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid black;
+}
+
+
+footer {
+    font-family: var(--font-texto);
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer > a {
+    color: white;
+    text-decoration: none;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+    color: var(--cor6);
 }
