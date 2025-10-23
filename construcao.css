@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "One Piece";
+    src: url(fontes/one\ piece\ font.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Texto";
+    src: url(fontes/ComicRelief-Regular.ttf) format("truetype");
+}
+
+:root {
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-onepiece: "One Piece", sans-serif;
+    --font-texto: "Texto", sans-serif;
+    --cor0: #E62C39;
+    --cor1: #FBC920;
+    --cor2: #B9EFF8;
+    --cor3: #2F76DC;
+    --cor4: #2E333F;
+    --cor6: #DFC18A;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: var(--font-padrao);
+    background-color: var(--cor2);
+    background-image: url(imagens/galleila.png);
+}
+
+h1 {
+    font-family: var(--font-onepiece);
+    font-size: 5.9em;
+    color: var(--cor4);
+    text-shadow: 4px 4px 0px #b9eff8bb;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+main {
+    height: 410px;
+}
+
+footer {
+    font-family: var(--font-texto);
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer > a {
+    color: white;
+    text-decoration: none;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+    color: var(--cor6);
+}
